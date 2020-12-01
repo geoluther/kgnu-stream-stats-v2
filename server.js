@@ -2,6 +2,7 @@
 
 const express = require("express");
 const app = express();
+require("dotenv").config();
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
@@ -52,15 +53,6 @@ app.get("/", function(request, response) {
 
 app.get("/all", function(request, response) {
   response.sendFile(__dirname + "/views/plotly.html");
-});
-
-// testing: get rid of these in production
-app.get("/old", (req, res) => {
-  res.sendFile(__dirname + "/views/index-old.html");
-});
-
-app.get("/plot", (req, res) => {
-  res.sendFile(__dirname + "/views/plotly.html");
 });
 
 app.get("/total", (req, res) => {
