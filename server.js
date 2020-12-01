@@ -2,6 +2,8 @@
 
 const express = require("express");
 const app = express();
+
+// read .env file on production
 require("dotenv").config();
 
 // http://expressjs.com/en/starter/static-files.html
@@ -53,10 +55,6 @@ app.get("/", function(request, response) {
 
 app.get("/all", function(request, response) {
   response.sendFile(__dirname + "/views/plotly.html");
-});
-
-app.get("/total", (req, res) => {
-  res.sendFile(__dirname + "/views/stream-total.html");
 });
 
 // listen for requests :)

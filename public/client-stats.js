@@ -1,5 +1,4 @@
-// client-side js
-// run by the browser each time your view template is loaded
+// client side endpoint testing, not used in any views
 
 fetch("/stats")
   .then(response => response.json())

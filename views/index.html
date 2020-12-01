@@ -8,69 +8,9 @@
   </head>
 
   <body>
-    <h3>Current Total Stream Listeners: <span id="current-total"></span></h3>
-    <p>Updated every 15 minutes, refresh page to reload.</p>
-
-    <div id="plot" style="width: 80%; height: 500px"></div>
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-    <script>
-      var total_listeners = {
-        x: [],
-        y: [],
-        name: "Total Listeners",
-        line: { shape: "spline" },
-        type: "scatter"
-      };
-
-      function renderChart() {
-        fetch("/week")
-          .then(res => res.json())
-          .then(data => {
-            document.getElementById("current-total").innerHTML = data[0].total;
-            data.forEach(value => {
-              let total = value.total;
-              let date = new Date(value.date);
-              total_listeners.y.push(total);
-              total_listeners.x.push(date);
-            });
-            var streamData = [total_listeners];
-            Plotly.newPlot("plot", streamData, layout, {
-              scrollZoom: true,
-              modeBarButtonsToRemove: ["sendDataToCloud", "toImage"],
-              displaylogo: false
-            });
-          })
-          .catch(error => console.error(error));
-
-        // set range of view
-        let dateRange = 2;
-        let lastweek_timestamp = new Date().setDate(
-          new Date().getDate() - dateRange
-        ); // returns timestamp, why?
-        let priorDate = new Date(lastweek_timestamp); // convert to date object
-        let currentDate = new Date();
-
-        console.log(priorDate.toString());
-        console.log(currentDate.toString());
-
-        // plotly layout
-        var layout = {
-          title: "KGNU Stream Listeners for last 48 hours",
-          xaxis: {
-            title: "Date & Time",
-            range: [priorDate, currentDate],
-            type: "date",
-            hoverformat: "%a, %B %d %I:%M %p"
-          },
-          yaxis: {
-            title: "Listeners"
-          }
-        };
-      }
-
-      renderChart();
-    </script>
+<!--     just a placeholder file, not used -->
+   <h1>
+     Hello.
+    </h1>
   </body>
 </html>
