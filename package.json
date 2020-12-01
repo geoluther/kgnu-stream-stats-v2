@@ -4,21 +4,22 @@
   "//3": "updating this file will download and update your packages",
   "name": "kgnu-stream-stats",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "author": "george",
+  "description": "Render graph of KGNU Stream Listener Stats.",
+  "author": "glf",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.6.2"
+    "mongodb": "^3.6.2",
+    "dotenv": "^8.2.0"
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "url": "https://github.com/geoluther/kgnu-stream-stats-v2"
   },
   "license": "MIT",
   "keywords": [

@@ -11,7 +11,7 @@
     <h3>Current Total Stream Listeners: <span id="current-total"></span></h3>
     <p>Updated every 15 minutes, refresh page to reload.</p>
 
-    <div id="plot2" style="width: 80%; height: 500px"></div>
+    <div id="plot" style="width: 80%; height: 500px"></div>
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -36,7 +36,7 @@
               total_listeners.x.push(date);
             });
             var streamData = [total_listeners];
-            Plotly.newPlot("plot2", streamData, layout, {
+            Plotly.newPlot("plot", streamData, layout, {
               scrollZoom: true,
               modeBarButtonsToRemove: ["sendDataToCloud", "toImage"],
               displaylogo: false
