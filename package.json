@@ -1,0 +1,35 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "kgnu-stream-stats",
+  "version": "0.0.1",
+  "description": "Render graph of KGNU Stream Listener Stats.",
+  "author": "glf",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "mongodb": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "url": "git+https://github.com/geoluther/kgnu-stream-stats-v2.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/geoluther/kgnu-stream-stats-v2/issues"
+  },
+  "homepage": "https://github.com/geoluther/kgnu-stream-stats-v2#readme"
+}
