@@ -70,10 +70,6 @@ app.get("/all", function(request, response) {
   response.sendFile(__dirname + "/views/plotly.html");
 });
 
-app.use(function (req, res, next) {
-  res.status(404).send("Sorry, couldn't find that!")
-})
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT || port, () => {
   console.log("Your app is listening on port " + listener.address().port);
